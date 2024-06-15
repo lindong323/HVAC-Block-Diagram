@@ -2,12 +2,24 @@
 
 ```mermaid
 graph TD
-    A[Electrical System] --> B[Compressor System]
-    B --> C[Lubrication System]
-    C --> D[Evaporator System]
-    D --> E[Condenser System]
-    E --> F[Refrigerant Circuit]
-    F --> G[Economizer]
-    G --> H[Purge System]
-    H --> I[Control System]
-
+    subgraph Functional_Systems
+        style Functional_Systems stroke-dasharray: 5 5
+        A[Electrical System]
+        B[Compressor System]
+        C[Lubrication System]
+        D[Evaporator System]
+        E[Condenser System]
+        F[Refrigerant Circuit]
+        G[Economizer]
+        H[Purge System]
+        I[Control System]
+    end
+    
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
