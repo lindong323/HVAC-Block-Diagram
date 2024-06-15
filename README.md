@@ -8,3 +8,7 @@ graph TD
     D --> E[Cooling Tower]
     E --> F[Pumps]
     F --> A
+    D --> G[Chilled Water]
+    G --> H[Air Handling Unit]
+    H --> I[Building Space]
+    I --> G
