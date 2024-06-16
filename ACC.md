@@ -40,7 +40,7 @@ graph TD
     M --> I
     B --> N[BAS Comms]
     N --> B
-    F --> O[Condenser Water Fan]
+    F --> O[Condenser Fan]
     O --> F
     
     OP --> OH
