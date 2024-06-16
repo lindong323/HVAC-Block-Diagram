@@ -1,15 +1,24 @@
-# Water-Cooled Chiller Boundary Diagram
-
-```mermaid
 graph TD
-    A[Power Supply] --> B[Control Panel]
-    B --> C[VSD/Soft Starter]
-    C --> D[Motor]
-    D --> E[Compressor]
-    E --> F[Condenser]
-    F --> G[Expansion Valve]
-    G --> H[Economizer]
-    H --> I[Evaporator]
+    subgraph Water-Cooled Chiller
+        style Water-Cooled Chiller stroke-dasharray: 5 5
+        B[Control Panel]
+        C[VSD/Soft Starter]
+        D[Motor]
+        E[Compressor]
+        F[Condenser]
+        G[Expansion Valve]
+        H[Economizer]
+        I[Evaporator]
+    end
+
+    A[Power Supply] --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
     H --> E
     I --> J[Chilled Water Pump]
     J --> K[Air Handling Unit]
