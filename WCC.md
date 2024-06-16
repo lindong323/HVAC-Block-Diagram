@@ -1,25 +1,19 @@
-# Water-Cooled Chiller Functional System Block Diagram
-
-```mermaid
 graph TD
-    subgraph Functional_Systems
-        style Functional_Systems stroke-dasharray: 5 5
-        A[Electrical System]
-        B[Compressor System]
-        C[Lubrication System]
-        D[Evaporator System]
-        E[Condenser System]
-        F[Refrigerant Circuit]
-        G[Economizer]
-        H[Purge System]
-        I[Control System]
-    end
-    
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-    H --> I
+    A[Power Supply] --> B[Power Delivery / Control Panel]
+    B --> C[VSD (VFD) / Soft Starter]
+    C --> D[Motor]
+    D --> E[Compressor]
+    E --> F[Condenser]
+    F --> G[Expansion Valve]
+    G --> H[Economizer (Optional)]
+    H --> I[Evaporator]
+    E -.-> I
+    I --> J[Chilled Water Pump]
+    J --> K[Air Handling Unit]
+    J --> L[Thermal Storage Tank (Optional)]
+    L -.-> M[Heat Exchanger (Optional)]
+    M -.-> I
+    A -.-> N[BAS Comms]
+    F --> O[Cooling Tower]
+    O --> P[Condenser Water Pump]
+    P -.-> F
