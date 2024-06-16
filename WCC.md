@@ -27,8 +27,8 @@ graph TD
     E --> F
     F --> G
     G --> H
-    H --> I
     H --> E
+    H --> I
     I --> E
     I --> J[Chilled Water Pump]
     J --> K[Air Handling Unit]
