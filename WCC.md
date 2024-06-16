@@ -52,3 +52,14 @@ graph TD
     E --> OS
     OS --> EJ
     EJ --> OP
+
+    %% Style for nodes outside the subgraph
+    style A fill:#ffcccc,stroke:#333,stroke-width:2px
+    style J fill:#ffcccc,stroke:#333,stroke-width:2px
+    style K fill:#ffcccc,stroke:#333,stroke-width:2px
+    style M fill:#ffcccc,stroke:#333,stroke-width:2px
+    style R fill:#ffcccc,stroke:#333,stroke-width:2px
+    style L fill:#ffcccc,stroke:#333,stroke-width:2px
+    style N fill:#ffcccc,stroke:#333,stroke-width:2px
+    style O fill:#ffcccc,stroke:#333,stroke-width:2px
+    style P fill:#ffcccc,stroke:#333,stroke-width:2px
