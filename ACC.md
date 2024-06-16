@@ -1,14 +1,53 @@
-# 水冷式冷水机组框图
+# Air-Cooled Chiller Boundary Diagram
 
 ```mermaid
 graph TD
-    A[压缩机] --> B[冷凝器]
-    B --> C[膨胀阀]
-    C --> D[蒸发器]
-    D --> E[冷却塔]
-    E --> F[水泵]
-    F --> A
-    D --> G[冷冻水]
-    G --> H[空气处理单元]
-    H --> I[建筑空间]
-    I --> G
+    subgraph aircooledchiller[Air-Cooled Chiller]
+        style aircooledchiller stroke-dasharray: 5 5
+        B[Control Panel]
+        C[VSD/Soft Starter]
+        D[Motor]
+        E[Compressor]
+        F[Condenser]
+        G[Expansion Valve]
+        H[Economizer]
+        I[Evaporator]
+        OP[Oil Pump]
+        OH[Oil Heater]
+        OF[Oil Filter]
+        OR[Oil Reservoir]
+        OS[Oil Separator]
+        EJ[Ejector]
+    end
+
+    A[Power Supply] --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    H --> E
+    I --> E
+    I --> J[Chilled Water Pump]
+    J --> K[Air Handling Unit]
+    K --> I
+    J --> M[Heat Exchanger]
+    M --> R[Thermal Storage Pump]
+    R --> L[Thermal Storage Tank]
+    L --> M
+    M --> I
+    B --> N[BAS Comms]
+    N --> B
+    F --> O[Condenser Water Fan]
+    O --> F
+    
+    OP --> OH
+    OH --> OF
+    OF --> E
+    E --> OR
+    OR --> OP
+    E --> OS
+    OS --> EJ
+    EJ --> OP
