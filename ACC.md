@@ -12,6 +12,7 @@ graph TD
         G[Expansion Valve]
         H[Economizer]
         I[Evaporator]
+        O[Condenser Fan]
         OP[Oil Pump]
         OH[Oil Heater]
         OF[Oil Filter]
@@ -40,7 +41,7 @@ graph TD
     M --> I
     B --> N[BAS Comms]
     N --> B
-    F --> O[Condenser Fan]
+    F --> O
     O --> F
     
     OP --> OH
@@ -60,4 +61,3 @@ graph TD
     style R fill:#ffcccc,stroke:#333,stroke-width:2px
     style L fill:#ffcccc,stroke:#333,stroke-width:2px
     style N fill:#ffcccc,stroke:#333,stroke-width:2px
-    style O fill:#ffcccc,stroke:#333,stroke-width:2px
