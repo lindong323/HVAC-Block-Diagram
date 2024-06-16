@@ -64,12 +64,11 @@ graph TD
     style O fill:#ffcccc,stroke:#333,stroke-width:2px
     style P fill:#ffcccc,stroke:#333,stroke-width:2px
 
-## Notes
-
-- Some equipment/components could be optional depending on different chiller types. For example:
-  - **Economizer**: May not be present in all chillers.
-  - **Thermal Storage Tank**: Used only in systems with thermal storage needs.
-  - **Oil Heater, Oil Filter, Oil Separator, Ejector**: Dependent on the specific compressor and system design.
-  - **Vibration Dampers, Flow Switches, Pressure Gauges, Relief Valves, Strainers, Temperature Sensors, Pressure Sensors**: These components are essential for monitoring and protection but may vary in type and presence depending on the specific chiller design and application.
-  - **Water Treatment System**: Critical for maintaining water quality, especially in large systems, but might be integrated or external depending on the setup.
-  - **VFD for Pumps**: Optional depending on the system's energy efficiency requirements.
+ %% Notes
+    %% Some equipment/components could be optional depending on different chiller types. For example:
+    %% Economizer: May not be present in all chillers.
+    %% Thermal Storage Tank: Used only in systems with thermal storage needs.
+    %% Oil Heater, Oil Filter, Oil Separator, Ejector: Dependent on the specific compressor and system design.
+    %% Vibration Dampers, Flow Switches, Pressure Gauges, Relief Valves, Strainers, Temperature Sensors, Pressure Sensors: These components are essential for monitoring and protection but may vary in type and presence depending on the specific chiller design and application.
+    %% Water Treatment System: Critical for maintaining water quality, especially in large systems, but might be integrated or external depending on the setup.
+    %% VFD for Pumps: Optional depending on the system's energy efficiency requirements.
