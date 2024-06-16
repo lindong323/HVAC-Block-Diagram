@@ -44,12 +44,11 @@ graph TD
     O --> P[Cooling Tower]
     P --> F
     
-    % Oil Flow Connections
-    OP[Oil Pump] --> OH[Oil Heater]
-    OH --> OF[Oil Filter]
+    OP --> OH
+    OH --> OF
     OF --> E
-    E --> OR[Oil Reservoir]
+    E --> OR
     OR --> OP
-    E --> OS[Oil Separator]
-    OS --> EJ[Ejector]
+    E --> OS
+    OS --> EJ
     EJ --> OP
