@@ -1,5 +1,3 @@
-Sure, here is a sample README file for your block diagram project:
-
 ```markdown
 # Block Diagram Project
 
