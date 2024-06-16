@@ -1,4 +1,3 @@
-```mermaid
 graph TD
     A[Power Supply] --> B[Power Delivery / Control Panel]
     B --> C[VSD (VFD) / Soft Starter]
