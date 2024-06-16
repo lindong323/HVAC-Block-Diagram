@@ -52,8 +52,12 @@ graph TD
     OS --> EJ
     EJ --> OP
 
-    %% Adjusted the positions to avoid overlaps
-    style J fill:#f9f,stroke:#333,stroke-width:2px
-    style M fill:#f9f,stroke:#333,stroke-width:2px
-    style R fill:#f9f,stroke:#333,stroke-width:2px
-    style L fill:#f9f,stroke:#333,stroke-width:2px
+    %% Style for nodes outside the subgraph
+    style A fill:#ffcccc,stroke:#333,stroke-width:2px
+    style J fill:#ffcccc,stroke:#333,stroke-width:2px
+    style K fill:#ffcccc,stroke:#333,stroke-width:2px
+    style M fill:#ffcccc,stroke:#333,stroke-width:2px
+    style R fill:#ffcccc,stroke:#333,stroke-width:2px
+    style L fill:#ffcccc,stroke:#333,stroke-width:2px
+    style N fill:#ffcccc,stroke:#333,stroke-width:2px
+    style O fill:#ffcccc,stroke:#333,stroke-width:2px
