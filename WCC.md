@@ -31,6 +31,7 @@ graph TD
     M --> R[Thermal Storage Pump]
     R --> L[Thermal Storage Tank]
     L --> M
+    M --> I
     B --> N[BAS Comms]
     N --> B
     F --> O[Condenser Water Pump]
