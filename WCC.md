@@ -3,18 +3,18 @@
 ```mermaid
 graph TD
     A[Power Supply] --> B[Control Panel]
-    B --> C[VSD / Soft Starter]
+    B --> C[VSD/Soft Starter]
     C --> D[Motor]
     D --> E[Compressor]
     E --> F[Condenser]
     F --> G[Expansion Valve]
-    G --> H[Economizer (Optional)]
+    G --> H[Economizer]
     H --> I[Evaporator]
     E -.-> I
     I --> J[Chilled Water Pump]
     J --> K[Air Handling Unit]
-    J --> L[Thermal Storage (Optional)]
-    L -.-> M[Heat Exchanger (Optional)]
+    J --> L[Thermal Storage]
+    L -.-> M[Heat Exchanger]
     M -.-> I
     A -.-> N[BAS Comms]
     F --> O[Cooling Tower]
