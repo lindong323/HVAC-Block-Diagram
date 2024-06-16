@@ -1,3 +1,6 @@
+# Water-Cooled Chiller Boundary Diagram
+
+```mermaid
 graph TD
     subgraph watercooledchiller[Water-Cooled Chiller]
         style watercooledchiller stroke-dasharray: 5 5
@@ -49,7 +52,7 @@ graph TD
     F --> O[Condenser Water Pump]
     O --> P[Cooling Tower]
     P --> F
-
+    
     OP --> OH
     OH --> OF
     OF --> E
