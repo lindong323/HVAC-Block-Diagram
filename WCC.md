@@ -1,3 +1,6 @@
+# Water-Cooled Chiller Boundary Diagram
+
+```mermaid
 graph TD
     subgraph Water-Cooled Chiller
         style Water-Cooled Chiller stroke-dasharray: 5 5
