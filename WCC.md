@@ -12,6 +12,12 @@ graph TD
         G[Expansion Valve]
         H[Economizer]
         I[Evaporator]
+        OP[Oil Pump]
+        OH[Oil Heater]
+        OF[Oil Filter]
+        OR[Oil Reservoir]
+        OS[Oil Separator]
+        EJ[Ejector]
     end
 
     A[Power Supply] --> B
@@ -37,3 +43,13 @@ graph TD
     F --> O[Condenser Water Pump]
     O --> P[Cooling Tower]
     P --> F
+    
+    % Oil Flow Connections
+    OP[Oil Pump] --> OH[Oil Heater]
+    OH --> OF[Oil Filter]
+    OF --> E
+    E --> OR[Oil Reservoir]
+    OR --> OP
+    E --> OS[Oil Separator]
+    OS --> EJ[Ejector]
+    EJ --> OP
