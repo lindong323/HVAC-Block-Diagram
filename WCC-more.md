@@ -18,7 +18,6 @@ graph TD
         OR[Oil Reservoir]
         OS[Oil Separator]
         EJ[Ejector]
-        WT[Water Treatment System]
         VD[Vibration Dampers]
         FS[Flow Switches]
         PG[Pressure Gauges]
@@ -26,20 +25,26 @@ graph TD
         ST[Strainers]
         TS[Temperature Sensors]
         PS[Pressure Sensors]
-        VFD[VFD for Pumps]
     end
 
     A[Power Supply] --> B
     B --> C
     C --> D
     D --> E
+    D --> VD
     E --> F
+    E --> OR
+    E --> OS
     F --> G
+    F --> O
+    F --> PG
     G --> H
     H --> I
     H --> E
     I --> E
     I --> J[Chilled Water Pump]
+    I --> FS
+    I --> TS
     J --> K[Air Handling Unit]
     K --> I
     J --> M[Heat Exchanger]
@@ -49,32 +54,18 @@ graph TD
     M --> I
     B --> N[BAS Comms]
     N --> B
-    F --> O[Condenser Water Pump]
-    O --> P[Cooling Tower]
-    P --> F
-    
     OP --> OH
     OH --> OF
     OF --> E
-    E --> OR
     OR --> OP
-    E --> OS
     OS --> EJ
     EJ --> OP
-    
-    WT --> F
-    VD --> D
-    FS --> I
-    FS --> F
-    PG --> I
-    PG --> F
     RV --> E
     RV --> F
     ST --> J
     ST --> O
-    TS --> I
-    TS --> F
-    PS --> I
-    PS --> F
-    VFD --> J
+    VFD[VFD for Pumps] --> J
     VFD --> O
+    WT[Water Treatment System] --> F
+    O --> P[Cooling Tower]
+    P --> F
