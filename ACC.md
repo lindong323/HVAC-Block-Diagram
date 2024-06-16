@@ -27,8 +27,8 @@ graph TD
     E --> F
     F --> G
     G --> H
-    H --> I
     H --> E
+    H --> I
     I --> E
     I --> J[Chilled Water Pump]
     J --> K[Air Handling Unit]
@@ -51,3 +51,9 @@ graph TD
     E --> OS
     OS --> EJ
     EJ --> OP
+
+    %% Adjusted the positions to avoid overlaps
+    style J fill:#f9f,stroke:#333,stroke-width:2px
+    style M fill:#f9f,stroke:#333,stroke-width:2px
+    style R fill:#f9f,stroke:#333,stroke-width:2px
+    style L fill:#f9f,stroke:#333,stroke-width:2px
