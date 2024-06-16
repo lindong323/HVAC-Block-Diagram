@@ -1,9 +1,9 @@
-# Air-Cooled Chiller Boundary Diagram
+# Water-Cooled Chiller Boundary Diagram
 
 ```mermaid
 graph TD
-    subgraph aircooledchiller[Air-Cooled Chiller]
-        style aircooledchiller stroke-dasharray: 5 5
+    subgraph watercooledchiller[Water-Cooled Chiller]
+        style watercooledchiller stroke-dasharray: 5 5
         B[Control Panel]
         C[VSD/Soft Starter]
         D[Motor]
@@ -12,26 +12,39 @@ graph TD
         G[Expansion Valve]
         H[Economizer]
         I[Evaporator]
-        O[Condenser Fan]
         OP[Oil Pump]
         OH[Oil Heater]
         OF[Oil Filter]
         OR[Oil Reservoir]
         OS[Oil Separator]
         EJ[Ejector]
+        VD[Vibration Dampers]
+        FS[Flow Switches]
+        PG[Pressure Gauges]
+        RV[Relief Valves]
+        ST[Strainers]
+        TS[Temperature Sensors]
+        PS[Pressure Sensors]
     end
 
     A[Power Supply] --> B
     B --> C
     C --> D
     D --> E
+    D --> VD
     E --> F
+    E --> OR
+    E --> OS
     F --> G
+    F --> O
+    F --> PG
     G --> H
-    H --> E
     H --> I
+    H --> E
     I --> E
     I --> J[Chilled Water Pump]
+    I --> FS
+    I --> TS
     J --> K[Air Handling Unit]
     K --> I
     J --> M[Heat Exchanger]
@@ -41,23 +54,18 @@ graph TD
     M --> I
     B --> N[BAS Comms]
     N --> B
-    F --> O
-    O --> F
-    
     OP --> OH
     OH --> OF
     OF --> E
-    E --> OR
     OR --> OP
-    E --> OS
     OS --> EJ
     EJ --> OP
-
-    %% Style for nodes outside the subgraph
-    style A fill:#ffcccc,stroke:#333,stroke-width:2px
-    style J fill:#ffcccc,stroke:#333,stroke-width:2px
-    style K fill:#ffcccc,stroke:#333,stroke-width:2px
-    style M fill:#ffcccc,stroke:#333,stroke-width:2px
-    style R fill:#ffcccc,stroke:#333,stroke-width:2px
-    style L fill:#ffcccc,stroke:#333,stroke-width:2px
-    style N fill:#ffcccc,stroke:#333,stroke-width:2px
+    RV --> E
+    RV --> F
+    ST --> J
+    ST --> O
+    VFD[VFD for Pumps] --> J
+    VFD --> O
+    WT[Water Treatment System] --> F
+    O --> P[Cooling Tower]
+    P --> F
