@@ -2,8 +2,8 @@
 
 ```mermaid
 graph TD
-    subgraph Water-Cooled Chiller
-        style Water-Cooled Chiller stroke-dasharray: 5 5
+    subgraph watercooledchiller[Water-Cooled Chiller]
+        style watercooledchiller stroke-dasharray: 5 5
         B[Control Panel]
         C[VSD/Soft Starter]
         D[Motor]
