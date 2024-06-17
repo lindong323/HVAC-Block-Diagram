@@ -13,7 +13,7 @@ graph TD
         H[Economizer]
         I[Evaporator]
         OP[Oil Pump]
-        OH[Oil Heater]
+        OH[Oil Heater/Oil Cooler]
         OF[Oil Filter]
         OR[Oil Reservoir]
         OS[Oil Separator]
