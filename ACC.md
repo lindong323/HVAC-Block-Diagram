@@ -14,7 +14,7 @@ graph TD
         I[Evaporator]
         O[Condenser Fan]
         OP[Oil Pump]
-        OH[Oil Heater]
+        OH[Oil Heater/Oil Cooler]
         OF[Oil Filter]
         OR[Oil Reservoir]
         OS[Oil Separator]
