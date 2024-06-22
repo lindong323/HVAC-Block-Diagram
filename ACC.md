@@ -14,44 +14,44 @@ graph TD
         I[Evaporator]
         O[Condenser Fan]
         OP[Oil Pump]
-        OH[Oil Heater/Oil Cooler]
+        OH[Oil Heater]
         OF[Oil Filter]
         OR[Oil Reservoir]
         OS[Oil Separator]
         EJ[Ejector]
     end
 
-    A[Power Supply] --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-    H --> E
-    H --> I
-    I --> E
-    I --> J[Chilled Water Pump]
-    J --> K[Air Handling Unit]
-    K --> I
-    J --> M[Heat Exchanger]
-    M --> R[Thermal Storage Pump]
-    R --> L[Thermal Storage Tank]
-    L --> M
-    M --> I
-    B --> N[BAS Comms]
-    N --> B
-    F --> O
-    O --> F
+    A[Power Supply] -->|Supplies power| B
+    B -->|Controls speed| C
+    C -->|Powers| D
+    D -->|Drives| E
+    E -->|Compresses refrigerant| F
+    F -->|Condenses refrigerant| G
+    G -->|Regulates flow| H
+    H -->|Enhances efficiency| E
+    H -->|Enhances efficiency| I
+    I -->|Evaporates refrigerant| E
+    I -->|Provides chilled water| J[Chilled Water Pump]
+    J -->|Circulates chilled water| K[Air Handling Unit]
+    K -->|Returns warm water| I
+    J -->|Transfers heat| M[Heat Exchanger]
+    M -->|Pumps heat transfer fluid| R[Thermal Storage Pump]
+    R -->|Stores heat| L[Thermal Storage Tank]
+    L -->|Returns fluid| M
+    M -->|Transfers chilled water| I
+    B -->|Communicates with| N[BAS Comms]
+    N -->|Receives commands| B
+    F -->|Facilitates heat removal| O[Condenser Fan]
+    O -->|Cools refrigerant| F
     
-    OP --> OH
-    OH --> OF
-    OF --> E
-    E --> OR
-    OR --> OP
-    E --> OS
-    OS --> EJ
-    EJ --> OP
+    OP -->|Pumps oil| OH
+    OH -->|Heats oil| OF
+    OF -->|Filters oil| E
+    E -->|Stores oil| OR
+    OR -->|Supplies oil| OP
+    E -->|Separates oil| OS
+    OS -->|Ejects oil| EJ
+    EJ -->|Returns oil| OP
 
     %% Style for nodes outside the subgraph
     style A fill:#ffcccc,stroke:#333,stroke-width:2px
@@ -61,6 +61,7 @@ graph TD
     style R fill:#ffcccc,stroke:#333,stroke-width:2px
     style L fill:#ffcccc,stroke:#333,stroke-width:2px
     style N fill:#ffcccc,stroke:#333,stroke-width:2px
+    style O fill:#ffcccc,stroke:#333,stroke-width:2px
 
 %% Notes
     %% Some equipment/components could be optional depending on different chiller types. For example:
