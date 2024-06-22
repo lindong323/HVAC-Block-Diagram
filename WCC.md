@@ -20,38 +20,38 @@ graph TD
         EJ[Ejector]
     end
 
-    A[Power Supply] --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-    H --> E
-    H --> I
-    I --> E
-    I --> J[Chilled Water Pump]
-    J --> K[Air Handling Unit]
-    K --> I
-    J --> M[Heat Exchanger]
-    M --> R[Thermal Storage Pump]
-    R --> L[Thermal Storage Tank]
-    L --> M
-    M --> I
-    B --> N[BAS Comms]
-    N --> B
-    F --> O[Condenser Water Pump]
-    O --> P[Cooling Tower]
-    P --> F
+    A[Power Supply] -->|Supplies Power| B
+    B -->|Controls| C
+    C -->|Drives| D
+    D -->|Powers| E
+    E -->|Compresses Refrigerant| F
+    F -->|Condenses Refrigerant| G
+    G -->|Regulates Flow| H
+    H -->|Enhances Efficiency| E
+    H -->|Enhances Efficiency| I
+    I -->|Evaporates Refrigerant| E
+    I -->|Provides Chilled Water| J[Chilled Water Pump]
+    J -->|Circulates Chilled Water| K[Air Handling Unit]
+    K -->|Returns Warm Water| I
+    J -->|Transfers Heat| M[Heat Exchanger]
+    M -->|Pumps Heat Transfer Fluid| R[Thermal Storage Pump]
+    R -->|Stores Heat| L[Thermal Storage Tank]
+    L -->|Returns Fluid| M
+    M -->|Transfers Chilled Water| I
+    B -->|Communicates| N[BAS Comms]
+    N -->|Receives Commands| B
+    F -->|Circulates Condenser Water| O[Condenser Water Pump]
+    O -->|Transfers Heat| P[Cooling Tower]
+    P -->|Cools Water| F
     
-    OP --> OH
-    OH --> OF
-    OF --> E
-    E --> OR
-    OR --> OP
-    E --> OS
-    OS --> EJ
-    EJ --> OP
+    OP -->|Pumps Oil| OH
+    OH -->|Heats Oil| OF
+    OF -->|Filters Oil| E
+    E -->|Stores Oil| OR
+    OR -->|Supplies Oil| OP
+    E -->|Separates Oil| OS
+    OS -->|Ejects Oil| EJ
+    EJ -->|Returns Oil| OP
 
     %% Style for nodes outside the subgraph
     style A fill:#ffcccc,stroke:#333,stroke-width:2px
