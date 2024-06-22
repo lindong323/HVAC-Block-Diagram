@@ -1,3 +1,6 @@
+# Water-Cooled Chiller Boundary Diagram
+
+```mermaid
 graph TD
     subgraph watercooledchiller[Water-Cooled Chiller]
         style watercooledchiller stroke-dasharray: 5 5
@@ -11,12 +14,10 @@ graph TD
         I[Evaporator]
         OP[Oil Pump]
         OH[Oil Heater]
-        OC[Oil Cooler]
         OF[Oil Filter]
         OR[Oil Reservoir]
         OS[Oil Separator]
         EJ[Ejector]
-        ED[Eductor]
     end
 
     A[Power Supply] --> B
@@ -44,16 +45,13 @@ graph TD
     P --> F
     
     OP --> OH
-    OP --> OC
     OH --> OF
-    OC --> OF
     OF --> E
     E --> OR
     OR --> OP
     E --> OS
     OS --> EJ
     EJ --> OP
-    EJ --> ED
 
     %% Style for nodes outside the subgraph
     style A fill:#ffcccc,stroke:#333,stroke-width:2px
