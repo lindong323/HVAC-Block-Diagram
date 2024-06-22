@@ -20,38 +20,38 @@ graph TD
         EJ[Ejector]
     end
 
-    A[Power Supply] -->|Supplies Power| B
-    B -->|Controls| C
-    C -->|Drives| D
-    D -->|Powers| E
-    E -->|Compresses Refrigerant| F
-    F -->|Condenses Refrigerant| G
-    G -->|Regulates Flow| H
-    H -->|Enhances Efficiency| E
-    H -->|Enhances Efficiency| I
-    I -->|Evaporates Refrigerant| E
-    I -->|Provides Chilled Water| J[Chilled Water Pump]
-    J -->|Circulates Chilled Water| K[Air Handling Unit]
-    K -->|Returns Warm Water| I
-    J -->|Transfers Heat| M[Heat Exchanger]
-    M -->|Pumps Heat Transfer Fluid| R[Thermal Storage Pump]
-    R -->|Stores Heat| L[Thermal Storage Tank]
-    L -->|Returns Fluid| M
-    M -->|Transfers Chilled Water| I
-    B -->|Communicates| N[BAS Comms]
-    N -->|Receives Commands| B
-    F -->|Circulates Condenser Water| O[Condenser Water Pump]
-    O -->|Transfers Heat| P[Cooling Tower]
-    P -->|Cools Water| F
+    A[Power Supply] -->|Supplies power| B
+    B -->|Controls speed| C
+    C -->|Powers| D
+    D -->|Drives| E
+    E -->|Increases pressure| F
+    F -->|Condenses refrigerant| G
+    G -->|Regulates flow| H
+    H -->|Enhances efficiency| E
+    H -->|Enhances efficiency| I
+    I -->|Evaporates refrigerant| E
+    I -->|Provides chilled water| J[Chilled Water Pump]
+    J -->|Circulates chilled water| K[Air Handling Unit]
+    K -->|Returns warm water| I
+    J -->|Transfers heat| M[Heat Exchanger]
+    M -->|Pumps heat transfer fluid| R[Thermal Storage Pump]
+    R -->|Stores heat| L[Thermal Storage Tank]
+    L -->|Returns fluid| M
+    M -->|Transfers chilled water| I
+    B -->|Communicates with| N[BAS Comms]
+    N -->|Receives commands| B
+    F -->|Circulates condenser water| O[Condenser Water Pump]
+    O -->|Transfers heat| P[Cooling Tower]
+    P -->|Cools water| F
     
-    OP -->|Pumps Oil| OH
-    OH -->|Heats Oil| OF
-    OF -->|Filters Oil| E
-    E -->|Stores Oil| OR
-    OR -->|Supplies Oil| OP
-    E -->|Separates Oil| OS
-    OS -->|Ejects Oil| EJ
-    EJ -->|Returns Oil| OP
+    OP -->|Pumps oil| OH
+    OH -->|Heats oil| OF
+    OF -->|Filters oil| E
+    E -->|Stores oil| OR
+    OR -->|Supplies oil| OP
+    E -->|Separates oil| OS
+    OS -->|Ejects oil| EJ
+    EJ -->|Returns oil| OP
 
     %% Style for nodes outside the subgraph
     style A fill:#ffcccc,stroke:#333,stroke-width:2px
