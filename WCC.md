@@ -1,4 +1,5 @@
 # Water-Cooled Chiller Boundary Diagram
+
 ```mermaid
 graph TD
     subgraph watercooledchiller[Water-Cooled Chiller]
@@ -13,12 +14,10 @@ graph TD
         I[Evaporator]
         OP[Oil Pump]
         OH[Oil Heater]
-        OC[Oil Cooler]
         OF[Oil Filter]
         OR[Oil Reservoir]
         OS[Oil Separator]
         EJ[Ejector]
-        ED[Eductor]
     end
 
     A[Power Supply] --> B
@@ -46,16 +45,13 @@ graph TD
     P --> F
     
     OP --> OH
-    OP --> OC
     OH --> OF
-    OC --> OF
     OF --> E
     E --> OR
     OR --> OP
     E --> OS
     OS --> EJ
     EJ --> OP
-    EJ --> ED
 
     %% Style for nodes outside the subgraph
     style A fill:#ffcccc,stroke:#333,stroke-width:2px
@@ -66,4 +62,4 @@ graph TD
     style L fill:#ffcccc,stroke:#333,stroke-width:2px
     style N fill:#ffcccc,stroke:#333,stroke-width:2px
     style O fill:#ffcccc,stroke:#333,stroke-width:2px
-    style P fill:#ffcccc,stroke:#333,stroke-width:2px
+    style P fill:#ffcccc,stroke:#333,stroke-width:2px![image](https://github.com/lindong323/HVAC-Block-Diagram/assets/172192173/155156a6-d8c6-4d4e-8038-14c6e90cfc98)
