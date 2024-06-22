@@ -35,7 +35,7 @@ graph TD
     K -->|Returns warm water| I
     J -->|Transfers heat| M[Heat Exchanger]
     M -->|Pumps heat transfer fluid| R[Thermal Storage Pump]
-    R -->|Stores cold water| L[Thermal Storage Tank]
+    R -->|Stores cold fluid| L[Thermal Storage Tank]
     L -->|Returns fluid| M
     M -->|Transfers chilled water| I
     B -->|Communicates with| N[BAS Comms]
