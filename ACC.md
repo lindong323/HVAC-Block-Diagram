@@ -18,6 +18,7 @@ graph TD
         OF[Oil Filter]
         OR[Oil Reservoir]
         OS[Oil Separator]
+        OC[Oil Cooler]
         EJ[Ejector]
     end
 
@@ -46,7 +47,8 @@ graph TD
     
     OP -->|Pumps oil| OH
     OH -->|Heats oil| OF
-    OF -->|Filters oil| E
+    OF -->|Filters oil| OC
+    OC -->|Cools oil| E
     E -->|Stores oil| OR
     OR -->|Supplies oil| OP
     E -->|Separates oil| OS
