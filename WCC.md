@@ -19,6 +19,7 @@ graph TD
         OS[Oil Separator]
         OC[Oil Cooler]
         EJ[Ejector]
+        PU[Purge Unit]
     end
 
     A[Power Supply] -->|Supplies power| B
@@ -44,6 +45,7 @@ graph TD
     F -->|Circulates condenser water| O[Condenser Water Pump]
     O -->|Transfers heat| P[Cooling Tower]
     P -->|Cools water| F
+    F -->|Removes non-condensables| PU
     
     OP -->|Pumps oil| OH
     OH -->|Heats oil| OF
