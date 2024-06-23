@@ -63,7 +63,24 @@ graph TD
     style R fill:#ffcccc,stroke:#333,stroke-width:2px
     style L fill:#ffcccc,stroke:#333,stroke-width:2px
     style N fill:#ffcccc,stroke:#333,stroke-width:2px
+
+    %% Ensure all nodes within subgraph have the same style
+    style B fill:#ffffff,stroke:#333,stroke-width:2px
+    style C fill:#ffffff,stroke:#333,stroke-width:2px
+    style D fill:#ffffff,stroke:#333,stroke-width:2px
+    style E fill:#ffffff,stroke:#333,stroke-width:2px
+    style F fill:#ffffff,stroke:#333,stroke-width:2px
+    style G fill:#ffffff,stroke:#333,stroke-width:2px
+    style H fill:#ffffff,stroke:#333,stroke-width:2px
+    style I fill:#ffffff,stroke:#333,stroke-width:2px
     style O fill:#ffffff,stroke:#333,stroke-width:2px
+    style OP fill:#ffffff,stroke:#333,stroke-width:2px
+    style OH fill:#ffffff,stroke:#333,stroke-width:2px
+    style OF fill:#ffffff,stroke:#333,stroke-width:2px
+    style OR fill:#ffffff,stroke:#333,stroke-width:2px
+    style OS fill:#ffffff,stroke:#333,stroke-width:2px
+    style OC fill:#ffffff,stroke:#333,stroke-width:2px
+    style EJ fill:#ffffff,stroke:#333,stroke-width:2px
 
 %% Notes
     %% Some equipment/components could be optional depending on different chiller types. For example:
