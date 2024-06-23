@@ -42,7 +42,7 @@ graph TD
     M -->|Transfers chilled water| I
     B -->|Communicates with| N[BAS Comms]
     N -->|Receives commands| B
-    F -->|Facilitates heat removal| O[Condenser Fan]
+    F -->|Facilitates heat removal| O
     O -->|Cools refrigerant| F
     
     OP -->|Pumps oil| OH
@@ -63,7 +63,7 @@ graph TD
     style R fill:#ffcccc,stroke:#333,stroke-width:2px
     style L fill:#ffcccc,stroke:#333,stroke-width:2px
     style N fill:#ffcccc,stroke:#333,stroke-width:2px
-    style O fill:#ffcccc,stroke:#333,stroke-width:2px
+    style O fill:#ffffff,stroke:#333,stroke-width:2px
 
 %% Notes
     %% Some equipment/components could be optional depending on different chiller types. For example:
