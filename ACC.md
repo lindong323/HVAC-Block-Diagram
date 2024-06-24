@@ -12,7 +12,7 @@ graph TD
         G[Expansion Valve]
         H[Economizer]
         I[Evaporator]
-        O[Condenser Fan]
+        O[Condenser Fan w/ VSD]
         OP[Oil Pump]
         OH[Oil Heater]
         OF[Oil Filter]
