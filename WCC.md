@@ -14,10 +14,11 @@ graph TD
         I[Evaporator]
         OP[Oil Pump]
         OF[Oil Filter]
-        OR[Oil Sump with Heater]
+        OR[Oil Sump with Oil Heater]
         OS[Oil Separator]
         OC[Oil Cooler]
         EJ[Ejector]
+        ED[Eductor]
         PU[Purge Unit]
     end
 
@@ -54,6 +55,7 @@ graph TD
     E -->|Separates oil| OS
     OS -->|Ejects oil| EJ
     EJ -->|Returns oil| OP
+    ED -->|Reclaims oil| OR
 
     %% Style for nodes outside the subgraph
     style A fill:#ffcccc,stroke:#333,stroke-width:2px
