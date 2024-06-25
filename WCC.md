@@ -1,6 +1,7 @@
 # Water-Cooled Chiller Boundary Diagram
 
 ```mermaid
+# Water-Cooled Chiller Boundary Diagram
 graph TD
     subgraph watercooledchiller[Water-Cooled Chiller]
         style watercooledchiller stroke-dasharray: 5 5
@@ -18,7 +19,6 @@ graph TD
         OS[Oil Separator]
         OC[Oil Cooler]
         EJ[Ejector]
-        ED[Eductor]
         PU[Purge Unit]
     end
 
@@ -46,7 +46,6 @@ graph TD
     O -->|Transfers heat| P[Cooling Tower]
     P -->|Cools water| F
     F -->|Removes non-condensables| PU
-    I -->|Reclaim oil| ED
     
     OP -->|Pumps oil| OF
     OF -->|Filters oil| OC
@@ -56,7 +55,6 @@ graph TD
     E -->|Separates oil| OS
     OS -->|Ejects oil| EJ
     EJ -->|Returns oil| OP
-    ED -->|Reclaims oil| OR
 
     %% Style for nodes outside the subgraph
     style A fill:#ffcccc,stroke:#333,stroke-width:2px
