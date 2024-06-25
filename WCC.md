@@ -13,9 +13,8 @@ graph TD
         H[Economizer]
         I[Evaporator]
         OP[Oil Pump]
-        OH[Oil Heater]
         OF[Oil Filter]
-        OR[Oil Sump]
+        OR[Oil Sump with Heater]
         OS[Oil Separator]
         OC[Oil Cooler]
         EJ[Ejector]
@@ -47,8 +46,7 @@ graph TD
     P -->|Cools water| F
     F -->|Removes non-condensables| PU
     
-    OP -->|Pumps oil| OH
-    OH -->|Heats oil| OF
+    OP -->|Pumps oil| OF
     OF -->|Filters oil| OC
     OC -->|Cools oil| E
     E -->|Stores oil| OR
