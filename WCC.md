@@ -46,6 +46,7 @@ graph TD
     O -->|Transfers heat| P[Cooling Tower]
     P -->|Cools water| F
     F -->|Removes non-condensables| PU
+    I -->|Reclaim oil| ED
     
     OP -->|Pumps oil| OF
     OF -->|Filters oil| OC
