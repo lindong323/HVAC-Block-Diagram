@@ -12,14 +12,14 @@ graph TD
         G[Expansion Valve]
         H[Economizer]
         I[Evaporator]
-        O[Condenser Fan w/ VSD]
+        O[Condenser Fan]
         OP[Oil Pump]
-        OH[Oil Heater]
         OF[Oil Filter]
-        OR[Oil Sump]
+        OR[Oil Reservoir]
         OS[Oil Separator]
         OC[Oil Cooler]
         EJ[Ejector]
+        ED[Eductor]
     end
 
     A[Power Supply] -->|Supplies power| B
@@ -45,8 +45,7 @@ graph TD
     F -->|Facilitates heat removal| O
     O -->|Cools refrigerant| F
     
-    OP -->|Pumps oil| OH
-    OH -->|Heats oil| OF
+    OP -->|Pumps oil| OF
     OF -->|Filters oil| OC
     OC -->|Cools oil| E
     E -->|Stores oil| OR
@@ -54,6 +53,8 @@ graph TD
     E -->|Separates oil| OS
     OS -->|Ejects oil| EJ
     EJ -->|Returns oil| OP
+    I -->|Reclaims oil| ED
+    ED -->|Returns oil| OR
 
     %% Style for nodes outside the subgraph
     style A fill:#ffcccc,stroke:#333,stroke-width:2px
@@ -63,24 +64,6 @@ graph TD
     style R fill:#ffcccc,stroke:#333,stroke-width:2px
     style L fill:#ffcccc,stroke:#333,stroke-width:2px
     style N fill:#ffcccc,stroke:#333,stroke-width:2px
-
-    %% Ensure all nodes within subgraph have the same style
-    style B fill:#ffffff,stroke:#333,stroke-width:2px
-    style C fill:#ffffff,stroke:#333,stroke-width:2px
-    style D fill:#ffffff,stroke:#333,stroke-width:2px
-    style E fill:#ffffff,stroke:#333,stroke-width:2px
-    style F fill:#ffffff,stroke:#333,stroke-width:2px
-    style G fill:#ffffff,stroke:#333,stroke-width:2px
-    style H fill:#ffffff,stroke:#333,stroke-width:2px
-    style I fill:#ffffff,stroke:#333,stroke-width:2px
-    style O fill:#ffffff,stroke:#333,stroke-width:2px
-    style OP fill:#ffffff,stroke:#333,stroke-width:2px
-    style OH fill:#ffffff,stroke:#333,stroke-width:2px
-    style OF fill:#ffffff,stroke:#333,stroke-width:2px
-    style OR fill:#ffffff,stroke:#333,stroke-width:2px
-    style OS fill:#ffffff,stroke:#333,stroke-width:2px
-    style OC fill:#ffffff,stroke:#333,stroke-width:2px
-    style EJ fill:#ffffff,stroke:#333,stroke-width:2px
 
 %% Notes
     %% Some equipment/components could be optional depending on different chiller types. For example:
