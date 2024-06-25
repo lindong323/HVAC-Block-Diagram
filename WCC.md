@@ -15,7 +15,7 @@ graph TD
         OP[Oil Pump]
         OH[Oil Heater]
         OF[Oil Filter]
-        OR[Oil Reservoir]
+        OR[Oil Sump]
         OS[Oil Separator]
         OC[Oil Cooler]
         EJ[Ejector]
