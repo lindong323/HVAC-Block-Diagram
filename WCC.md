@@ -9,6 +9,8 @@ graph TD
         D[Motor]
         E[Compressor]
         F[Condenser]
+        FD[Filter-Drier]
+        SG[Sight Glass]
         G[Expansion Valve]
         H[Economizer]
         I[Evaporator]
@@ -26,7 +28,9 @@ graph TD
     C -->|Powers| D
     D -->|Drives| E
     E -->|Increases pressure| F
-    F -->|Condenses refrigerant| G
+    F -->|Condenses refrigerant| FD
+    FD -->|Filters refrigerant| SG
+    SG -->|Provides visual inspection| G
     G -->|Regulates flow| H
     H -->|Enhances efficiency| E
     H -->|Enhances efficiency| I
