@@ -1,4 +1,4 @@
-mermaid
+```mermaid
 graph TD
     title[Pareto Chart by Failure Frequency]
     style title fill:#f9f,stroke:#333,stroke-width:4px
